@@ -7,10 +7,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.note_item_view.view.*
 
+/* O Adapter encapsula as notas. */
 class NoteListAdapter(private val context: Context, private val notes: MutableList<Note>) :
     RecyclerView.Adapter<NoteListAdapter.NoteViewHolder>() {
 
     inner class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        /* Essa Classe apenas declara as variáveis do Layout */
         val descriptionNote = itemView.note_item_description
         val titleNote = itemView.note_item_title
     }
