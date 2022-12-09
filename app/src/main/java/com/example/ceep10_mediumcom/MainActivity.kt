@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
 
     /* Global Declare Variables: */
     private var listNotes: MutableList<Note>? = null
+    private var retrofitInitializer = RetrofitInitializer()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +24,12 @@ class MainActivity : AppCompatActivity() {
         actionBarTitleCenter()
         settingRecyclerView()
         instanciarClasseNotas()
+        declareVariables()
+
+    }
+
+    private fun declareVariables(){
+        retrofitInitializer
     }
 
     private fun settingRecyclerView() {
